@@ -1,0 +1,713 @@
+
+/* =========================================
+   1. GLOBAL SETTINGS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #081426;
+    color: #ffffff;
+    line-height: 1.6;
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+a {
+    transition: color 0.3s ease, background-color 0.3s ease,
+        transform 0.3s ease, border-color 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================================
+   2. NAVIGATION BAR
+========================================= */
+
+header {
+    background-color: #081426;
+    border-bottom: 1px solid #1e3450;
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+    padding: 22px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #60a5fa;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+
+/* =========================================
+   3. HERO SECTION
+========================================= */
+
+.hero {
+    max-width: 1150px;
+    margin: auto;
+    padding: 120px 30px 100px;
+}
+
+.intro-label {
+    color: #60a5fa;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #60a5fa;
+}
+
+.hero-description {
+    color: #aab9cc;
+    max-width: 600px;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   4. BUTTONS
+========================================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.primary-btn {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.primary-btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    border: 1px solid #64748b;
+    color: #ffffff;
+}
+
+.secondary-btn:hover {
+    background-color: #1e3450;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   5. SHARED SECTION HEADINGS
+========================================= */
+
+.section-label {
+    color: #60a5fa;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.section-heading > p:last-child {
+    color: #aab9cc;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   6. ABOUT ME SECTION
+========================================= */
+
+.about-section {
+    background-color: #081426;
+    padding: 90px 30px;
+}
+
+.about-container {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.about-heading {
+    margin-bottom: 40px;
+}
+
+.about-heading h2 {
+    font-size: 34px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 55px;
+    align-items: start;
+}
+
+.about-text h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #60a5fa;
+}
+
+.about-text p {
+    color: #b3c1d3;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+.about-focus {
+    background-color: #10233c;
+    padding: 28px;
+    border: 1px solid #243f60;
+    border-radius: 10px;
+}
+
+.about-focus h3 {
+    font-size: 21px;
+    margin-bottom: 25px;
+}
+
+.focus-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 22px;
+    align-items: flex-start;
+}
+
+.focus-item:last-child {
+    margin-bottom: 0;
+}
+
+.focus-item > span {
+    font-size: 25px;
+    flex-shrink: 0;
+}
+
+.focus-item h4 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.focus-item p {
+    color: #aab9cc;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   7. TECHNICAL SKILLS SECTION
+========================================= */
+
+.skills-section {
+    background-color: #10233c;
+    padding: 85px 30px;
+}
+
+.skills-grid {
+    max-width: 1050px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: #142b49;
+    border: 1px solid #243f60;
+    padding: 28px 20px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: #3b82f6;
+    background-color: #193657;
+}
+
+.skill-icon {
+    font-size: 35px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.skill-card p {
+    color: #aab9cc;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   8. FEATURED PROJECTS SECTION
+========================================= */
+
+.projects-section {
+    background-color: #10233c;
+    padding: 90px 30px;
+}
+
+.projects-container {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background-color: #081426;
+    border: 1px solid #243f60;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #3b82f6;
+}
+
+.project-image {
+    width: 100%;
+    height: 230px;
+    background-color: #142b49;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-category {
+    color: #60a5fa;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.project-content h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.project-description {
+    color: #aab9cc;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.project-content h4 {
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 25px;
+}
+
+.project-tags span {
+    background-color: #1b3657;
+    color: #bfdbfe;
+    padding: 7px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.project-links a {
+    display: inline-block;
+    color: #60a5fa;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.project-links a:hover {
+    color: #93c5fd;
+}
+
+
+/* =========================================
+   9. SERVICES SECTION
+========================================= */
+
+.services-section {
+    background-color: #081426;
+    padding: 90px 30px;
+}
+
+.services-container {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    background-color: #10233c;
+    border: 1px solid #243f60;
+    padding: 30px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: #3b82f6;
+    background-color: #142b49;
+}
+
+.service-icon {
+    font-size: 34px;
+    display: block;
+    margin-bottom: 18px;
+}
+
+.service-card h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #aab9cc;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   10. CONTACT SECTION
+========================================= */
+
+.contact-section {
+    background-color: #10233c;
+    padding: 100px 30px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 700px;
+    margin: auto;
+}
+
+.contact-container h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.contact-description {
+    color: #aab9cc;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: #60a5fa;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.social-links a:hover {
+    color: #93c5fd;
+}
+
+
+/* =========================================
+   11. FOOTER
+========================================= */
+
+.footer {
+    background-color: #06101f;
+    padding: 25px 20px;
+    text-align: center;
+    border-top: 1px solid #1e3450;
+}
+
+.footer p {
+    color: #8293a9;
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+
+/* =========================================
+   12. ACCESSIBILITY
+========================================= */
+
+/* Visible keyboard focus for links and buttons */
+
+a:focus-visible {
+    outline: 2px solid #60a5fa;
+    outline-offset: 4px;
+    border-radius: 3px;
+}
+
+/* Improve text selection visibility */
+
+::selection {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   13. RESPONSIVE DESIGN
+========================================= */
+
+/* Tablets and smaller laptops */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* Mobile devices */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .nav-links {
+        gap: 12px 18px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 85px 25px;
+    }
+
+    .hero h1 {
+        font-size: clamp(36px, 9vw, 48px);
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .about-section,
+    .skills-section,
+    .projects-section,
+    .services-section {
+        padding: 70px 22px;
+    }
+
+    .about-heading h2 {
+        font-size: 28px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .about-focus {
+        padding: 22px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 210px;
+    }
+
+    .contact-section {
+        padding: 75px 22px;
+    }
+
+    .contact-container h2 {
+        font-size: 32px;
+    }
+
+}
+
+
+/* Very small mobile devices */
+
+@media (max-width: 480px) {
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn {
+        text-align: center;
+    }
+
+    .social-links {
+        gap: 20px;
+    }
+
+    .project-content {
+        padding: 20px;
+    }
+
+}
+
+
+/* =========================================
+   14. REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+}
